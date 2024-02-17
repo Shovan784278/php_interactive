@@ -1,5 +1,7 @@
 <?php
 
+#! /usr/bin/env php
+
 // Here I took a random number selelection from rand() and give a loop when $user_input give a number, then loop randomly check what is the exact number 
 
 //Now here I can check if $user_input select minimum and maximum values for guessing.
@@ -29,6 +31,7 @@ $options = getopt("", ['min::', 'max::']); // In this line IF I set ['min:', 'ma
     } else {
 
         printf("Congrats! You guessed right number ");
+
     }
 
   } 
