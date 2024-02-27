@@ -1,14 +1,17 @@
 <?php
 
+
+    //This is called Program to interface not to an implementation. That means this is called Programe to an Interface
+
     class Driver {
 
-        protected Vehical $vehicle; 
+        protected Bike $bike; 
 
         //This is called constructor injection
 
-        public function __construct(Vehical $vehicle) { 
+        public function __construct(Bike $bike) { 
            
-            $this->vehicle = $vehicle;
+            $this->bike = $bike;
 
         }
 
@@ -20,8 +23,16 @@
 
         public function startRide() {
 
-            $this->vehicle->start();
+            $this->bike->start();
 
+        }
+    }
+
+
+    class bike {
+
+        public function start() {
+            printf("Bike started\n");
         }
     }
 
@@ -51,9 +62,8 @@
 
     //Here I created objects and passing the constructor with loosly coupled parameters 
 
-    $engine = new Engine();
-    $vehical = new Vehical($engine);
-    $driver = new Driver($vehicle);
+    $bike = new bike();
+    $driver = new Driver($bike);
 
     $driver->startRide();
 
